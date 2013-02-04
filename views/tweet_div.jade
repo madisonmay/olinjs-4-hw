@@ -1,0 +1,8 @@
+div(class="header")
+	| <b> Look at all these twits! </b>
+each tweet in tweets
+	div(class="tweet")
+		div(class="user_name")
+			| <b> #{tweet.user} </b>
+		div(class="tweet_body")
+			| #{tweet.message}

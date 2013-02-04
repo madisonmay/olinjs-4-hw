@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h1= title
+	form(action='create', method='post')
+		p
+			label Name:
+			input(name='name')
+		p 
+			input(type='submit', name='submit')

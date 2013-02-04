@@ -1,8 +1,101 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #61A5CC;
 }
 
 a {
   color: #00B7FF;
+}
+
+.create_tweet {
+	position: relative;
+	margin-right: 50px;
+	float: left;
+	width: 325px;
+	border: black solid 5px;
+	border-radius: 10px;
+	background-color:#A5A5A5;
+}
+
+.text_input {
+	height: 50px;
+	margin: 5px;
+}
+
+.tweets {
+	position: relative;
+	margin-left:350px;
+	min-height: 500px;
+	width: 700px;
+	border: black solid 5px;
+	border-radius: 10px;
+	background-color:#A5A5A5;
+	padding-bottom: 20px;
+}
+
+.page_title {
+	margin-top:0px;
+	font-size: 36px;
+	text-align: center;
+}
+
+.post_tweet {
+	float: right;
+	background-color: #BEBEBE;
+	border: black solid 3px;
+	margin-right: 15px;
+	margin-bottom: 10px;
+}
+
+.input_label {
+	text-align: center;
+	font-size: 18px;
+	float:left;
+	margin-left: 10px;
+	vertical-align: top;
+}
+
+.new_tweet {
+	margin-top: 10px;
+	float:right;
+	margin-right: 10px;
+	background-color: #DADADA;
+}
+
+.textarea {
+	margin-top: 10px;
+}
+
+.user_name {
+	font-size: 22px;
+	margin-bottom: 15px;
+}
+
+.tweet {
+	margin-left: 30px;
+	margin-right: 20px;
+	margin-bottom: 15px;
+}
+
+.line {
+	border: 3px solid black;
+	color: black;
+	margin-top: 5px;
+	margin-right: -1px;
+	margin-left: -1px;
+	margin-bottom: 20px;
+}
+
+.header {
+	border: 5px solid black;
+	margin-left: -5px;
+	margin-right: -5px;
+	margin-top: -5px;
+	margin-bottom: 20px;
+	text-align: center;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	font-size: 24px;
+	padding-top: 25px;
 }

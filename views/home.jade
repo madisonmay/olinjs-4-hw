@@ -1,0 +1,27 @@
+extends layout
+
+block scripts
+	script(type='text/javascript', src='/javascripts/newtweet.js')
+
+block content
+	h1(class="page_title") #{title}
+	form(class="create_tweet")
+		div(class="text_input")
+			div(class="input_label") 
+				b
+					| Compose a 
+					br 
+					| Twit:
+			div(class="textarea")
+				textarea(id="new_tweet", rows="1", class="new_tweet")
+		div(class="submit_tweet")
+			input(type='button', class="post_tweet", value="Send Twit")
+	div(class="tweets")
+		div(class="header")
+			| <b> Look at all these twits! </b>
+		each tweet in tweets
+			div(class="tweet")
+				div(class="user_name")
+					| <b> #{tweet.user} </b>
+				div(class="tweet_body")
+					| #{tweet.message}
