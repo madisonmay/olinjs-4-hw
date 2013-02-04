@@ -20,7 +20,7 @@ exports.create = function(req, res) {
 		console.log(req.body);
 
 		if (db_user.length == 1) {
-			req.session.user = db_user.name;
+			req.session.user = db_user[0].name;
 			console.log(db_user.name);
 			res.redirect('/home');
 		}
