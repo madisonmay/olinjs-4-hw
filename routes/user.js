@@ -4,16 +4,19 @@
 var models = require('../models');
 var User = models.User;
 
+//remains from default express install
 exports.list = function(req, res) {
 	res.send("respond with a resource");
 };
 
+//render login form
 exports.login = function(req, res) {
 	res.render('login', {
 		title: 'Login to Twittur'
 	});
 };
 
+//login or create user
 exports.create = function(req, res) {
 	User.find({name : req.body.name}).exec(function(err, db_user) {
 

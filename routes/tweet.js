@@ -3,12 +3,14 @@ var User = models.User;
 var Tweet = models.Tweet;
 
 
+//StackOverflow sort function
 Array.prototype.sortByProp = function(p){
 	return this.sort(function(a,b){
 		return (a[p] > b[p]) ? 1 : (a[p] < b[p]) ? -1 : 0;
 	});
 };
 
+//Render homepage
 exports.home_page = function(req, res) {
 	Tweet.find({}).exec(function (err, db_tweets) {
 		if (err) {
@@ -21,9 +23,9 @@ exports.home_page = function(req, res) {
 	});
 };
 
+
 exports.create_tweet = function(req, res) {
-	console.log(req.session.user);
-	if (req.body.message.length <= 140) {
+	if (req.body.message.length <= 140 && req.body.message.length > 0) {
 		var tweet = new Tweet({ message: req.body.message, datetime:req.body.datetime, user: req.session.user });
 		tweet.save(function (err) {
 			if (err) {
@@ -32,10 +34,12 @@ exports.create_tweet = function(req, res) {
 		});
 	}
 	else {
+		//Size does not meet requirements
 		res.send("Please limit tweets to less than 140 characters.");
 	}
 };
 
+//Save data posted to server
 exports.refresh = function(req, res) {
 	Tweet.find({}).exec(function (err, db_tweets) {
 		if (err) {
